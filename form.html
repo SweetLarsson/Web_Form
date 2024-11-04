@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Functional User Registration Form</title>
+</head>
+<body>
+    <!-- Page label -->
+     <h1>User Registration Form</h1>
+     <form id = "userForm">
+        <!-- First Name -->
+         <label for="firstName">First Name</label>
+         <input type="text" id="firstName" name="firstName" required>
+
+         <!-- Last Name -->
+         <label for="lastName">Last Name</label>
+         <input type="text" id="lastName" name="lastName" required>
+
+         <!-- Email -->
+         <label for="email">Email</label>
+         <input type="email" id="email" name="email" required>
+
+         <!-- Phone Number -->
+         <label for="phoneNumber">Phone Number</label>
+         <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{11}" 
+         >
+
+         <!-- Password -->
+         <label for="password">Password</label>
+         <div class="passwordContainer">
+            <input type="password" id="password" name="password" required minlength="8"
+            title="Please make your password atleast 8 characters long">
+            <span class="togglePassword" onclick="togglePasswordVisibility()">😊</span>
+         </div>
+
+         <!-- Submit Button -->
+          <input type="submit" value="Register">
+     </form>
+
+
+     <!-- Collection Table -->
+      <table>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Utibeabasi</td>
+                <td>Essien</td>
+                <td>08021423358</td>
+                <td>utibeabasiessien001@gmail.com</td>
+            </tr>
+        </tbody>
+       
+      </table>
+
+     <!-- Modal -->
+     <div id="myModal" class="modal">
+        <div class="modal_content">
+            <span class="close">&times;</span>
+            <h2>Form Submitted Successfully</h2>
+            <p>Here are your credentials:</p>
+            <p id="modalContent"></p>
+        </div>
+     </div>
+         
+     <!-- Link to JavaScript -->
+    <script src="form.js"></script>
+</body>
+</html>
